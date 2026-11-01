@@ -1,0 +1,23 @@
+{
+  "source_v30_run": "runs/v3_0_bayesian",
+  "source_v31_dir": "artifacts/v3_1",
+  "output_dir": "artifacts/v3_2_smoke_stable",
+  "device": "cuda",
+  "require_cuda": true,
+  "training_seeds": [5],
+  "training_steps": 2,
+  "functional_grid_size": 24,
+  "posterior_perturbation_scale": 0.1,
+  "covariance_samples": 4,
+  "covariance_rank_tolerance": 1e-7,
+  "covariance_lambda_multiplier": 0.1,
+  "covariance_lambda_quantile": 0.9,
+  "epsilon_quantile": 0.5,
+  "epsilon_multiplier": 0.01,
+  "minimum_epsilon": 1e-10,
+  "calibration_episodes": 4,
+  "evaluation_rollout": 18,
+  "history_capacity": 12,
+  "material_effect_threshold": 0.05,
+  "diagnostic_geometry_states_per_group": 1
+}

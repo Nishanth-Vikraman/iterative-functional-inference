@@ -1,0 +1,11 @@
+{
+  "seed": 7,
+  "device": "cuda",
+  "require_cuda": true,
+  "output_dir": "runs/canonical",
+  "tasks": {"support_sizes": [2, 4, 8, 16]},
+  "phase_a": {"steps": 6000, "batch_size": 32, "probe_size": 64},
+  "phase_b": {"steps": 12000, "batch_size": 16, "rollout_max": 5, "lambda_differential": 0.0},
+  "evaluation": {"episodes_per_cell": 128, "query_size": 256, "rollout_steps": 8, "seeds": [11, 23, 47]}
+}
+

@@ -1,0 +1,53 @@
+{
+  "seed": 31,
+  "device": "cuda",
+  "require_cuda": true,
+  "output_dir": "runs/v3_0_cuda_smoke",
+  "tasks": {
+    "support_sizes": [2, 4],
+    "sensor_centers": [-1.5, -0.75, 0.0, 0.75, 1.5],
+    "sensor_width": 0.03,
+    "observation_noise": 0.25,
+    "likelihood_noise": 0.25,
+    "train_sequence_length": 3,
+    "evaluation_sequence_length": 4
+  },
+  "operator": {
+    "dimension": 16,
+    "action_dimension": 6,
+    "hidden_dimension": 32,
+    "basis_depth": 1,
+    "projection_ridge": 0.0001
+  },
+  "phase_a": {
+    "steps": 4,
+    "batch_size": 3,
+    "probe_size": 16,
+    "learning_rate": 0.002,
+    "conditioning_weight": 0.05,
+    "phi_weight": 0.00001,
+    "span_threshold": 10.0,
+    "validation_episodes": 4,
+    "log_every": 1
+  },
+  "phase_b": {
+    "steps": 4,
+    "batch_size": 2,
+    "rollout_max": 3,
+    "variable_rollout": false,
+    "probe_size": 16,
+    "model_dimension": 16,
+    "learning_rate": 0.001,
+    "action_metric": "functional",
+    "lambda_functional": 0.25,
+    "gradient_clip": 1.0,
+    "log_every": 1
+  },
+  "evaluation": {
+    "episodes_per_cell": 2,
+    "query_size": 24,
+    "rollout_steps": 3,
+    "extended_rollout_steps": 4,
+    "seeds": [5]
+  }
+}

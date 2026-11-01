@@ -1,0 +1,12 @@
+{
+  "seed": 3,
+  "device": "cuda",
+  "require_cuda": true,
+  "output_dir": "runs/v2_2_cuda_smoke",
+  "tasks": {"support_sizes": [2, 4]},
+  "operator": {"dimension": 16, "action_dimension": 6, "hidden_dimension": 32, "basis_depth": 1},
+  "phase_a": {"steps": 3, "batch_size": 2, "probe_size": 12, "validation_episodes": 3, "log_every": 1, "span_threshold": 10.0},
+  "phase_b": {"steps": 2, "batch_size": 3, "rollout_max": 2, "probe_size": 12, "latent_dimension": 16, "controller_hidden_dimension": 24, "log_every": 1},
+  "evaluation": {"episodes_per_cell": 1, "query_size": 24, "rollout_steps": 3, "seeds": [5]},
+  "predictive_state": {"temperature": 0.1, "information_weight": 1.0, "projection_seed": 2202, "updater_layers": 1}
+}

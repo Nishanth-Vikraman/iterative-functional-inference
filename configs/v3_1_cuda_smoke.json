@@ -1,0 +1,17 @@
+{
+  "source_run": "runs/v3_0_bayesian",
+  "output_dir": "artifacts/v3_1_smoke",
+  "device": "cuda",
+  "require_cuda": true,
+  "seeds": [5],
+  "support_sizes": [2],
+  "episodes_per_target": 1,
+  "query_size": 32,
+  "projection_size": 24,
+  "rollout_steps": 18,
+  "history_capacity": 12,
+  "projection_span_threshold": 0.2,
+  "bucket_outside_fraction_threshold": 0.5,
+  "material_effect_threshold": 0.05,
+  "checkpoint_every_cells": 1
+}

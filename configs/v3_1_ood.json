@@ -1,0 +1,17 @@
+{
+  "source_run": "runs/v3_0_bayesian",
+  "output_dir": "artifacts/v3_1",
+  "device": "cuda",
+  "require_cuda": true,
+  "seeds": [11, 23, 47],
+  "support_sizes": [2, 4, 8, 16],
+  "episodes_per_target": 4,
+  "query_size": 256,
+  "projection_size": 128,
+  "rollout_steps": 18,
+  "history_capacity": 12,
+  "projection_span_threshold": 0.2,
+  "bucket_outside_fraction_threshold": 0.5,
+  "material_effect_threshold": 0.05,
+  "checkpoint_every_cells": 1
+}
